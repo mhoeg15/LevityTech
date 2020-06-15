@@ -1,0 +1,94 @@
+---
+layout: default
+---
+
+        <div id="main">
+
+            <!-- One -->
+                <section id="one">
+                    <div class="image main" data-position="center">
+                        <img src="https://www.autoitscript.com/forum/uploads/monthly_2020_03/tech.gif.7449db47191b0e32967887c117908b3c.gif" alt="" />
+                    </div>
+                    <div class="container">
+                        <header class="major">
+                            <h2>Levity</h2>
+                            <p>More than code</a>.</p>
+                        </header>
+                        <p>We are dedicated to empowering companies like you to be equipped with leading technologies. From upgrading existing projects,
+                            to disrupting a market with a new idea, Levity is ready for any task. Creating brilliant and cunning user experiences capable of overcoming
+                            operational obstacles through digital innovations.
+                        </p>
+                    </div>
+                </section>
+
+            <!-- Two -->
+                <section id="two">
+                    <div class="container">
+                        <h3>Solutions</h3>
+                        <p>When it comes down to it, Levity solves our clients most challenging problems. With a team of broad talent, we bring digital innovation with us wherever we go.</p>
+                        <ul class="feature-icons">
+                            <li class="icon solid fa-code">Development</li>
+                            <li class="icon solid fa-mobile">Mobile Apps</li>
+                            <li class="icon solid fa-link">Blockchain</li>
+                            <li class="icon solid fa-vr-cardboard">VR/AR</li>
+                            <li class="icon solid fa-pencil-ruler">Design</li>
+                            <li class="icon solid fa-puzzle-piece">Strategy</li>
+
+                        </ul>
+                    </div>
+                </section>
+                
+                <section id="blog">
+                    <div class="container">
+                        <h3>Our Work</h3>
+                        <p>Our success and culture is all you will need to be on board with our amazing team.</p>
+                        <div class="features">
+                            {% for post in site.posts limit:3 %}
+                                <article>
+                                    <a href="{{ post.url }}" class="image"><img src="{{base.url}}/images/{{post.img}}" alt="" /></a>
+                                    <div class="inner">
+                                        <h4>{{ post.title }}</h4>
+                                        <p>{{ post.excerpt }}</p>
+                                    </div>
+                                </article>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </section>
+
+                <section id="four">
+                    <div class="container">
+                        <h3>Our Clients</h3>
+                        <div class="box alt">
+                            <div class="row gtr-50 gtr-uniform">
+                                <div class="col-4"><span class="image fit"><img src="images/ranch_baby.jpg" alt="" /></span></div>
+                                <div class="col-4"><span class="image fit"><img src="images/match_learn_launch.jpg" alt="" /></span></div>
+                                <div class="col-4"><span class="image fit"><img src="images/bvu.png" alt="" /></span></div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            <!-- Four -->
+                <section id="five">
+                    <div class="container">
+                        <h3>Contact Us</h3>
+                        <form method="post" action="#">
+                            <div class="row gtr-uniform">
+                                <div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
+                                <div class="col-6 col-12-xsmall"><input type="text" name="number" id="name" placeholder="Number" /></div>
+                                <div class="col-12"><input type="email" name="email" id="subject" placeholder="Email" /></div>
+                                <div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
+                                <div class="g-recaptcha" data-sitekey="6Lfm-KMZAAAAAP2AURFpp1Xsyp-YNiS-UVUXR-d_"></div>
+                                <div class="col-12">
+                                    <ul class="actions">
+                                        <li><input type="submit" class="primary" value="Send Message" /></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+
+
