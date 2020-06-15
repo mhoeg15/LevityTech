@@ -17,8 +17,9 @@ title: Levity
 email: bazyl@levitytech.net
 description: >- # this means to ignore newlines until "baseurl:"
   This is a site for us to show off our amazing team and skills!
-baseurl: "/levitytech" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://levitytech.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+root: ""
 twitter_username: llclevity
 github_username:  bazylhorsey
 
@@ -27,7 +28,7 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-
+# root: /
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
