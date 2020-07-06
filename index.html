@@ -2,30 +2,41 @@
 layout: default
 ---
 
-        <div id="main">
+    <body>
+       
+        <div class="loader">
+            <img src="/images/loading.gif" alt="Loading...">
+        </div>
 
-            <!-- One -->
-                <section id="one">
-                    <div class="image main" data-position="center">
-                        <img src="https://www.autoitscript.com/forum/uploads/monthly_2020_03/tech.gif.7449db47191b0e32967887c117908b3c.gif" alt="" />
-                    </div>
-                    <div class="container">
+        <div id="main">
+            
+            <script>
+                function toggleHeader() {
+                    document.getElementById("header").classList.toggle('hidden');
+                    document.getElementById("wrapper").classList.toggle('expand');
+                    document.getElementById("toggle-btn").classList.toggle('shift');
+                }
+            </script>
+    
+            <!-- About -->
+                <section id="About">
+                    <div class="container noborder">
                         <header class="major">
                             <h2>Levity</h2>
                             <p>More than code</a>.</p>
                         </header>
-                        <p>We are dedicated to empowering companies like you to be equipped with leading technologies. From upgrading existing projects,
+                        <p>We are dedicated to empowering companies like you to be equipped with leading technologies. From upgrading existing projects
                             to disrupting a market with a new idea, Levity is ready for any task. Creating brilliant and cunning user experiences capable of overcoming
                             operational obstacles through digital innovations.
                         </p>
                     </div>
                 </section>
 
-            <!-- Two -->
-                <section id="two">
+            <!-- Solutions -->
+                <section id="Solutions">
                     <div class="container">
                         <h3>Solutions</h3>
-                        <p>When it comes down to it, Levity solves our clients most challenging problems. With a team of broad talent, we bring digital innovation with us wherever we go.</p>
+                        <p>When it comes down to it, Levity solves our clients' most challenging problems. With a team of broad talent, we bring digital innovation with us wherever we go.</p>
                         <ul class="feature-icons">
                             <li class="icon solid fa-code">Development</li>
                             <li class="icon solid fa-mobile">Mobile Apps</li>
@@ -33,14 +44,15 @@ layout: default
                             <li class="icon solid fa-vr-cardboard">VR/AR</li>
                             <li class="icon solid fa-pencil-ruler">Design</li>
                             <li class="icon solid fa-puzzle-piece">Strategy</li>
-
                         </ul>
                     </div>
                 </section>
-                
-                <section id="blog">
+
+
+            <!-- News -->    
+                <section id="News">
                     <div class="container">
-                        <h3>Our Work</h3>
+                        <h3>News</h3>
                         <p>Our success and culture is all you will need to be on board with our amazing team.</p>
                         <div class="features">
                             {% for post in site.posts limit:3 %}
@@ -56,7 +68,43 @@ layout: default
                     </div>
                 </section>
 
-                <section id="four">
+            <!-- Team -->
+            <section id="Team">
+                <div class = "container">
+                    <div class="our-team">
+                        <div class="inner-team">
+                            <h3>Our Team</h3>
+                            <div class="team-border"></div>
+                            <div class="team-row">
+                                <div class="team-col">
+                                    <div class="team-member">
+                                        <img src="images/team/Bazyl.JPG" alt="p1">
+                                        <div class="team-member-name"><b>Bazyl Horsey</b></div>
+                                        <p>CEO</p>
+                                    </div>
+                                </div>
+                                <div class="team-col">
+                                    <div class="team-member">
+                                        <img src="images/team/Michael.JPG" alt="p2">
+                                        <div class="team-member-name"><b>Michael Martin</b></div>
+                                        <p>CTO</p>
+                                    </div>
+                                </div>
+                                <div class="team-col">
+                                    <div class="team-member">
+                                        <img src="images/team/Cole.JPG" alt="p3">
+                                        <div class="team-member-name"><b>Cole Gosler</b></div>
+                                        <p>CMO</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </section>    
+
+            <!-- Clients -->
+                <section id="Clients">
                     <div class="container">
                         <h3>Our Clients</h3>
                         <div class="box alt">
@@ -64,14 +112,12 @@ layout: default
                                 <div class="col-4"><span class="image fit"><img src="images/ranch_baby.jpg" alt="" /></span></div>
                                 <div class="col-4"><span class="image fit"><img src="images/match_learn_launch.jpg" alt="" /></span></div>
                                 <div class="col-4"><span class="image fit"><img src="images/bvu.png" alt="" /></span></div>
-
-
                             </div>
                         </div>
                     </div>
                 </section>
-            <!-- Four -->
-                <section id="five">
+            <!-- Contact -->
+                <section id="Contact">
                     <div class="container">
                         <h3>Contact Us</h3>
                         <form method="post" action="https://formspree.io/myynjale">
@@ -90,5 +136,5 @@ layout: default
                         </form>
                     </div>
                 </section>
-
+            </body>
 

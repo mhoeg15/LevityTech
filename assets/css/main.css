@@ -1674,6 +1674,7 @@ input[type="button"],
   text-align: center;
   top: 0;
   width: 23em;
+  transition: linear .5s;
   right: 0; }
   #header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
     color: #ffffff; }
@@ -1744,14 +1745,21 @@ input[type="button"],
         #header > nav ul li:first-child {
           border-top: 0; }
 
+#header.hidden {
+  right: -23em; }
+
 /* Wrapper */
 #wrapper {
   background: #fff;
+  transition: linear .5s;
   padding-right: 23em; }
+
+#wrapper.expand {
+  padding-right: 0; }
 
 /* Main */
 #main > section {
-  border-top: solid 6px #f4f4f4; }
+  border-bottom: solid 6px #f4f4f4; }
   #main > section > .container {
     padding: 6em 0 4em 0; }
   #main > section:first-child {
@@ -2084,5 +2092,92 @@ input[type="button"],
   input[type="button"],
   .button {
     padding: 0; } }
+/* Loading Screen */
+.loader {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #191f26;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.loader.hidden {
+  animation: fadeOut 1s;
+  animation-fill-mode: forwards; }
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden; } }
+/* Hide Sidebar Button */
+#toggle-btn {
+  position: fixed;
+  height: 40px;
+  right: 23em;
+  top: 0px;
+  width: 45px;
+  z-index: 2;
+  background: #5ad3fe;
+  color: #5ad3fe;
+  transition: linear .5s; }
+
+#toggle-btn.shift {
+  right: 0; }
+
+/* Team */
+.our-team {
+  padding: 40px 0;
+  background: white;
+  text-align: center; }
+
+.team-inner {
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 20px; }
+
+.team-border {
+  width: 160px;
+  height: 5px;
+  background: #5ad3fe;
+  margin: 26px auto; }
+
+.team-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.team-col {
+  flex: 33.33%;
+  max-width: 33.33%;
+  box-sizing: border-box;
+  padding: 15px; }
+
+.team-member {
+  background: #fff;
+  padding: 30px; }
+
+.team-member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; }
+
+.team-member-name {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 20px 0; }
+
+@media screen and (max-width: 600px) {
+  .team-col {
+    flex: 100%;
+    max-width: 100%; } }
+@media screen and (max-width: 960px) {
+  .team-col {
+    flex: 100%;
+    max-width: 80%; } }
 
 /*# sourceMappingURL=main.css.map */
