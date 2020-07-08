@@ -7,7 +7,7 @@
 @import 'libs/html-grid';
 @import url('fontawesome-all.min.css');
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Source+Code+Pro:400");
-@import "base", "layout", "syntax-highlighting";
+// @import "base", "layout", "syntax-highlighting";
 
 /*
 	Read Only by HTML5 UP
@@ -1869,22 +1869,9 @@
 		}
 
 	/* Hide Sidebar Button */
+		
 
-	#toggle-btn {
-        position: fixed;
-		height: 40px;
-		border: none;
-        top: 0px;
-        width: 45px;
-        z-index: 2;
-        background: #5ad3fe;
-		color: #5ad3fe;
-		transition: linear .5s;
-	}
-	
-	#toggle-btn.shift {
-		right: 0;
-	}
+
 
 	/* Team */
 
@@ -1949,5 +1936,31 @@
     .team-col {
         flex: 100%;
         max-width: 80%;
+    }
+}
+
+#toggle-btn.shift {
+	right: 0;
+}
+
+#toggle-btn {
+	display: block;
+	position: fixed;
+	height: 40px;
+	border: none;
+	width: 45px;
+	z-index: 2;
+	background: #5ad3fe;
+	color: #5ad3fe;
+}
+
+.icon-bars {
+	text-align: center;
+	vertical-align: middle;
+}
+
+@media screen and (max-width:1024px) {
+    #toggle-btn {
+        display: none;
     }
 }
