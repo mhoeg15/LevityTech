@@ -2109,20 +2109,6 @@ input[type="button"],
     opacity: 0;
     visibility: hidden; } }
 /* Hide Sidebar Button */
-#toggle-btn {
-  position: fixed;
-  height: 40px;
-  border: none;
-  top: 0px;
-  width: 45px;
-  z-index: 2;
-  background: #5ad3fe;
-  color: #5ad3fe;
-  transition: linear .5s; }
-
-#toggle-btn.shift {
-  right: 0; }
-
 /* Team */
 .our-team {
   padding: 40px 0;
@@ -2174,5 +2160,25 @@ input[type="button"],
   .team-col {
     flex: 100%;
     max-width: 80%; } }
+#toggle-btn.shift {
+  right: 0; }
+
+#toggle-btn {
+  display: block;
+  position: fixed;
+  height: 40px;
+  border: none;
+  width: 45px;
+  z-index: 2;
+  background: #5ad3fe;
+  color: #5ad3fe; }
+
+.icon-bars {
+  text-align: center;
+  vertical-align: middle; }
+
+@media screen and (max-width: 1024px) {
+  #toggle-btn {
+    display: none; } }
 
 /*# sourceMappingURL=main.css.map */
