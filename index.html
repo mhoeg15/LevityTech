@@ -16,7 +16,6 @@ layout: default
                     document.getElementById("header").classList.toggle('hidden');
                     document.getElementById("wrapper").classList.toggle('expand');
                     document.getElementById("toggle-btn").classList.toggle('shift');
-                    
                 }
             </script>
     
@@ -35,7 +34,7 @@ layout: default
                 </section>
 
             <!-- Solutions -->
-                <section id="Solutions">
+                <section id="Solutions" data-aos="fade-up">
                     <div class="container">
                         <h3>Solutions</h3>
                         <p>When it comes down to it, Levity solves our clients' most challenging problems. With a team of broad talent, we bring digital innovation with us wherever we go.</p>
@@ -52,16 +51,16 @@ layout: default
 
 
             <!-- News -->    
-                <section id="News">
+                <section id="News" data-aos="fade-up">
                     <div class="container">
                         <h3>News</h3>
                         <p>Our success and culture is all you will need to be on board with our amazing team.</p>
                         <div class="features">
                             {% for post in site.posts limit:3 %}
-                                <article>
+                                <article data-aos="fade-left">
                                     <a href="{{ post.url }}" class="image"><img src="{{base.url}}/images/{{post.img}}" alt="" /></a>
                                     <div class="inner">
-                                        <h4>{{ post.e }}</h4>
+                                        <h4>{{ post.title }}</h4>
                                         <p>{{ post.excerpt }}</p>
                                     </div>
                                 </article>
@@ -71,7 +70,7 @@ layout: default
                 </section>
 
             <!-- Team -->
-            <section id="Team">
+            <section id="Team" data-aos="fade-up">
                 <div class = "container">
                     <div class="our-team">
                         <div class="inner-team">
@@ -106,7 +105,7 @@ layout: default
             </section>    
 
             <!-- Clients -->
-                <section id="Clients">
+                <section id="Clients" data-aos="fade-up">
                     <div class="container">
                         <h3>Our Clients</h3>
                         <div class="box alt">
@@ -119,7 +118,7 @@ layout: default
                     </div>
                 </section>
             <!-- Contact -->
-                <section id="Contact">
+                <section id="Contact" data-aos="fade-up">
                     <div class="container">
                         <h3>Contact Us</h3>
                         <form method="post" action="https://formspree.io/myynjale">
@@ -138,5 +137,12 @@ layout: default
                         </form>
                     </div>
                 </section>
+                <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+                <script>
+                  AOS.init({
+                    delay: 150,
+                    duration: 500,
+                  });
+                </script>
             </body>
 
