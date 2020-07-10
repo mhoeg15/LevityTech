@@ -1238,6 +1238,7 @@
 					border-top: solid _size(border-width) _palette(header, border);
 					display: block;
 					padding: 0;
+					
 
 					a {
 						@include vendor('transition', 'none');
