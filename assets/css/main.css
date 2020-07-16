@@ -1643,7 +1643,9 @@ input[type="button"],
   .features article .inner {
     display: inline-block;
     vertical-align: middle;
-    width: 50%; }
+    width: 50%;
+    padding-left: 10px;
+    padding-right: 10px; }
     .features article .inner > :last-child {
       margin-bottom: 0; }
 
