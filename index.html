@@ -1,15 +1,56 @@
 ---
 layout: default
 ---
+<!--
+    Temporary
+-->
+<script>
 
-    <body>
-       
+function closeModal(title) {
+    var modal = document.getElementById(title);
+    modal.className = "Modal is-hidden is-visuallyHidden";
+    document.getElementById("main").classList.remove("is-blurred");
+    document.getElementById("header").classList.remove("is-blurred");
+}
+
+function openModal(title) {
+    var modal = document.getElementById(title);
+    var container = document.getElementById("main");
+    modal.className = "Modal is-visuallyHidden";
+    setTimeout(function() {
+        document.getElementById("main").classList.add("is-blurred");
+        document.getElementById("header").classList.add("is-blurred");
+        modal.className = "Modal";
+    }, 50);
+}
+
+window.onclick = function(event) {
+    console.log(event.target.className);
+    console.log(event.target.classList);
+    if (event.target.className == "Modal") {
+        event.target.className = "Modal is-hidden is-visuallyHidden";
+        document.getElementById("main").classList.remove("is-blurred");
+        document.getElementById("header").classList.remove("is-blurred");
+    }
+}
+</script>
+
+{% for post in site.posts limit:3 %}
+<div class='Modal is-hidden is-visuallyHidden' id='{{ post.title }}'>
+    <div class='Modal-content'>
+        <span id="closeModal" class="Close" onclick="closeModal('{{ post.title }}')">&times;</span>
+        {{ post }}
+    </div>
+</div>
+{% endfor %}
+
+<body>
         <div class="loader">
             <img src="/images/loading.gif" alt="Loading...">
         </div>
-
-        <div id="main">
-            
+        
+        <div id="main">      
+  
             <!-- Toggle -->
             <script>
                 function toggleHeader() {
@@ -58,10 +99,17 @@ layout: default
                         <div class="features">
                             {% for post in site.posts limit:3 %}
                                 <article data-aos="fade-left">
-                                    <a href="{{ post.url }}" class="image"><img src="{{base.url}}/images/{{post.img}}" alt="" /></a>
-                                    <div class="inner">
-                                        <h4>{{ post.title }}</h4>
-                                        <p>{{ post.excerpt }}</p>
+                                <div class="btn_container">
+                                    <a href="#{{ post.title }}" onclick="openModal('{{ post.title }}')">
+                                        <div class="card">
+                                            <img class="image" style="padding: 20px 20px 20px 20px;" src="{{base.url}}/images/posts/{{post.img}}" alt=""/>
+                                            <div class="inner">
+                                                <h4 style="padding-top:36px">{{ post.title }}</h4>
+                                                <p style='margin-bottom: 0px;'>{{ post.excerpt }}</p>
+                                                <br/>
+                                            </div>
+                                        </div>
+                                    </a>
                                     </div>
                                 </article>
                             {% endfor %}
