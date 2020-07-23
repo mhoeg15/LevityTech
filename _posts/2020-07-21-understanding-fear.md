@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Managing COVID fear, and Panic in the Workplace
+title: Managing COVID Fear and Panic in the Workplace
 img: managingcovid.png
 excerpt: Maybe you are late for a deadline, are frustrated someone else did not fulfill what they said they would, or weeks of planning just didn't work out this time. Regardless, we can choose how we will handle our emotions to be a positive force in our daily activities.
 
