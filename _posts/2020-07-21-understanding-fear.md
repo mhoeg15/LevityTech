@@ -36,6 +36,4 @@ Maybe you are late for a deadline, are frustrated someone else did not fulfill w
 
 To summarize, recognizing our own emotions as a powerful force that we are willing to look at from a bigger picture can help us become better peers, and sometimes even motivate us to create even greater works. This doesn't mean you should never have a reaction to your emotions, only that you can recognize and adapt to our own emotional impulses and respond accordingly.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RcGyVTAoXEU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 By Bazyl Horsey, Co-founder
