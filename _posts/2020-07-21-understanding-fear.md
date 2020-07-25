@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Managing COVID fear, and Panic in the Workplace
-img: managingcovid.png
-excerpt: Maybe you are late for a deadline, are frustrated someone else did not fulfill what they said they would, or weeks of planning just didn't work out this time. Regardless, we can choose how we will handle our emotions to be a positive force in our daily activities.
+title: Managing COVID Fear and Panic in the Workplace
+img: covidfear.png
+excerpt: Recognizing our own emotions as a powerful force that we are willing to understand can help us become better peers, and motivate innovation. At Levity, we built this company during an epidemic and economic collapse.
 
 ---
 <br/>
