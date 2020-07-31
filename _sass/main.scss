@@ -1158,6 +1158,7 @@
 		top: 0;
 		width: $size-header;
 		transition: linear .5s;
+		overflow: hidden;
 
 		@if _misc(header-side) == 'right' {
 			right: 0;
@@ -1190,7 +1191,8 @@
 
 		> header {
 			@include vendor('flex-shrink', '0');
-			padding: 3em;
+			padding: 2em;
+			
 
 			.avatar {
 				display: block;
