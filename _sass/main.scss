@@ -1145,6 +1145,10 @@
 
 /* Header */
 
+	#header::-webkit-scrollbar {
+		display: none;
+	  }
+	  
 	#header {
 		@include vendor('display', 'flex');
 		@include vendor('flex-direction', 'column');
@@ -1158,7 +1162,8 @@
 		top: 0;
 		width: $size-header;
 		transition: linear .5s;
-		overflow: hidden;
+		-ms-overflow-style: none;  /* IE and Edge */
+		scrollbar-width: none;  /* Firefox */
 
 		@if _misc(header-side) == 'right' {
 			right: 0;
