@@ -33,6 +33,23 @@ window.onclick = function(event) {
         document.getElementById("header").classList.remove("is-blurred");
     }
 }
+
+var coll = document.getElementByClassName("collapsible");
+var i;
+
+for(i=0; i< coll.lenght; i++){
+    coll[i].addEventListener("click", function(){
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if(content.style.display == "block"){
+            content.style.display = "none";
+        }
+        else { 
+            content.style.display = "block"; 
+        }
+    });
+}
+
 </script>
 
 {% for post in site.posts limit:3 %}
@@ -90,6 +107,32 @@ window.onclick = function(event) {
                     </div>
                 </section>
 
+            <!-- Featured Article --!>
+                <section id="Featured" data-aos="fade-up">
+                    <div class="container">
+                        <h3>Featured Article </h3>
+                        <div class="features">
+                            {% for post in site.posts %}
+                                {% if post.featured == "True" %}
+                                    <article data-aos="fade-left">
+                                        <div class="btn_container">
+                                            <a href="#{{ post.title }}" onclick="openModal('{{ post.title }}')">
+                                                <div class="card">
+                                                    <img class="image" style="padding: 20px 20px 20px 20px; margin-bottom: 0px;" src="{{base.url}}/images/posts/{{post.img}}" alt=""/>
+                                                    <div class="inner">
+                                                        <h4 style="padding-top:36px">{{ post.title }}</h4>
+                                                        <p style='margin-bottom: 0px;'>{{ post.excerpt }}</p>
+                                                        <br/>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </article>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </section>
 
             <!-- News -->    
                 <section id="News" data-aos="fade-up">
@@ -113,6 +156,7 @@ window.onclick = function(event) {
                                     </div>
                                 </article>
                             {% endfor %}
+                            <!-- <a href="/allPosts.html">All Posts</a> -->
                         </div>
                     </div>
                 </section>
@@ -142,8 +186,15 @@ window.onclick = function(event) {
                                 <div class="team-col">
                                     <div class="team-member">
                                         <img src="images/team/Cole.JPG" alt="p3">
-                                        <div class="team-member-name"><b>Cole Gosler</b></div>
+                                        <div class="team-member-name"><b>Cole Goslar</b></div>
                                         <p>CMO</p>
+                                    </div>
+                                </div>
+                                <div class="team-col">
+                                    <div class="team-member">
+                                        <img src="images/team/Alyssa.JPG" alt="p4">
+                                        <div class="team-member-name""><b>Alyssa Ertz</b></div>
+                                        <p>Graphic Designer</p>
                                     </div>
                                 </div>
                             </div>
@@ -161,6 +212,7 @@ window.onclick = function(event) {
                                 <div class="col-4"><span class="image fit"><img src="images/ranch_baby.jpg" alt="" /></span></div>
                                 <div class="col-4"><span class="image fit"><img src="images/match_learn_launch.jpg" alt="" /></span></div>
                                 <div class="col-4"><span class="image fit"><img src="images/bvu.png" alt="" /></span></div>
+                                <div class="col-4"><span class="image fit"><img src="images/midwest_management.jpg" alt="" /></span></div>
                             </div>
                         </div>
                     </div>

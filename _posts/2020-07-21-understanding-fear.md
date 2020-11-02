@@ -1,5 +1,6 @@
 ---
 layout: post
+featured: "True"
 title: Managing COVID Fear and Panic in the Workplace
 img: covidfear.png
 excerpt: Recognizing our own emotions as a powerful force that we are willing to understand can help us become better peers, and motivate innovation. At Levity, we built this company during an epidemic and economic collapse.
